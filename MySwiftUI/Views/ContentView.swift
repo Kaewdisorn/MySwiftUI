@@ -10,14 +10,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            
-            
-            Text("Home")
-                .font(.system(size: 50, weight: .bold, design: .rounded))
-                .tabItem{
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
+            VStack{
+                MapView()
+                    .ignoresSafeArea(edges: .top)
+                    .frame(height:300)
+                CircleImageView()
+                    .offset(y: -130)
+                    .padding(.bottom, -130)
+                LandmarksView()
+            }
+            .tabItem{
+                Image(systemName: "house.fill")
+                Text("Home")
+            }
             //Text("Profile")
             ProfileView()
                 //.font(.system(size: 30, weight: .bold, design: .rounded))

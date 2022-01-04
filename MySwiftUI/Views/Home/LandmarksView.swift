@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandmarksView: View {
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
             Text("Turtle Rock")
                 .font(.title)
             HStack{
@@ -18,9 +18,15 @@ struct LandmarksView: View {
                 Spacer()
                 Text("California")
                     .font(.subheadline)
+                    .foregroundColor(.secondary)
             }
+            Divider()
+            Text("About Turtle Rock")
+                .font(.title2)
+            Text("Descriptive text goes here.")
         }
         .padding()
+        Spacer()
     }
 }
 
