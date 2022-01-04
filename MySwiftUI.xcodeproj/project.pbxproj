@@ -92,6 +92,7 @@
 		8A586B7D278427A3002B6E4C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8A586B9227844CD5002B6E4C /* TableView */,
 				8A586B7927841A90002B6E4C /* LandmarksView.swift */,
 				8A586B7E278427D8002B6E4C /* CircleImageView.swift */,
 				8A586B80278428E8002B6E4C /* MapView.swift */,
@@ -113,9 +114,6 @@
 				8A586B632783E69F002B6E4C /* ContentView.swift */,
 				8A586B7D278427A3002B6E4C /* Home */,
 				8A586B8227842FF5002B6E4C /* Profile */,
-				8A586B8C27843ABF002B6E4C /* LandmarkRow.swift */,
-				8A586B8E27843DE2002B6E4C /* LandmarkList.swift */,
-				8A586B90278440F4002B6E4C /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +125,16 @@
 				8A586B8927843A30002B6E4C /* ModelData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8A586B9227844CD5002B6E4C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8A586B8C27843ABF002B6E4C /* LandmarkRow.swift */,
+				8A586B8E27843DE2002B6E4C /* LandmarkList.swift */,
+				8A586B90278440F4002B6E4C /* DetailView.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
