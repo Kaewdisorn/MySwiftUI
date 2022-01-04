@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     var body: some View {
         TabView {
             VStack{
-                MapView()
+                MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
                     .ignoresSafeArea(edges: .top)
                     .frame(height:300)
-                CircleImageView()
+                CircleImageView(image: Image("turtlerock"))
                     .offset(y: -130)
                     .padding(.bottom, -130)
                 LandmarksView()
+                Spacer()
             }
             .tabItem{
                 Image(systemName: "house.fill")

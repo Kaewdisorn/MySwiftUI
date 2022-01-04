@@ -26,7 +26,6 @@ struct LandmarksView: View {
             Text("Descriptive text goes here.")
         }
         .padding()
-        Spacer()
     }
 }
 
