@@ -10,23 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            
+            
             Text("Home")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .font(.system(size: 50, weight: .bold, design: .rounded))
                 .tabItem{
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
-            Text("Profile")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            //Text("Profile")
+            ProfileView()
+                //.font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
                 }
         }
-        .onAppear(){
-            UITabBar.appearance().barTintColor = .gray
-        }
-        .accentColor(.red)
     }
 }
 
@@ -35,8 +34,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
  
 
  
