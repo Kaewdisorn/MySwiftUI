@@ -24,9 +24,6 @@ struct LandmarkRow: View {
             }
             
         }
-
-        
-        
     }
 }
 
