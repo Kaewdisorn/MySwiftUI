@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    @EnvironmentObject var modelData: ModelData
     var body: some View {
         NavigationView{
-            List(landmarks) { landmark in
+            List(modelData.landmarks) { landmark in
                 NavigationLink{
                     DetailView(landmark: landmark)
                 } label: {
@@ -19,9 +20,9 @@ struct LandmarkList: View {
             }
             .navigationTitle("Landmarks")
         }
-        
     }
 }
+
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
@@ -29,6 +30,7 @@ struct LandmarkList_Previews: PreviewProvider {
             LandmarkList()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
+                .environmentObject(ModelData())
         }
 
     }

@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct DetailView: View {
+    @EnvironmentObject var modelData: ModelData
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
+    
     var body: some View {
         ScrollView {
             MapView(coordinate: landmark.locationCoordinate)
@@ -21,9 +26,11 @@ struct DetailView: View {
                 .padding(.bottom, -130)
 
             VStack(alignment: .leading) {
-                Text(landmark.name)
-                    .font(.title)
-
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
                 HStack {
                     Text(landmark.park)
                     Spacer()
@@ -46,6 +53,9 @@ struct DetailView: View {
 }
 
 struct DetailView_Previews: PreviewProvider {
+    static let modelData = ModelData()
     static var previews: some View {
-        DetailView(landmark: landmarks[0])    }
+        DetailView(landmark: ModelData().landmarks[0])
+            .environmentObject(modelData)
+    }
 }

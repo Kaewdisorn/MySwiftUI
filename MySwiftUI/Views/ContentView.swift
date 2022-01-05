@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct ContentView: View {
     var body: some View {
@@ -16,12 +15,10 @@ struct ContentView: View {
                 Image(systemName: "house.fill")
                 Text("Home")
             }
-            //Text("Profile")
-            ProfileView()
-                //.font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Profile")
+            FavoriteView()
+                .tabItem{
+                    Image(systemName: "star.fill")
+                    Text("Favorite")
                 }
         }
     }
@@ -30,6 +27,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }
  
