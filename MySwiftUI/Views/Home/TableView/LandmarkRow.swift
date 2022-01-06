@@ -22,7 +22,6 @@ struct LandmarkRow: View {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
             }
-            
         }
     }
 }
